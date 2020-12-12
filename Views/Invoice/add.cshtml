@@ -1,0 +1,39 @@
+    @{
+        ViewBag.Title = "Sum Page";
+    }
+     
+    <h1>Welcome to Sum Page</h1>
+     
+   <form action=""  method="post">
+
+        first number :<input id="firstnumber" name="firstnumber" type="text" /><br/>
+        Second number :<input id="secondnumber" name="secondnumber" type="text" /><br />
+    
+        <input id="Submit1" type="submit" value="submit" />
+            <input type="submit" value="+" formaction="Add" /> &nbsp;&nbsp;&nbsp;
+    <input type="submit" value="-" formaction="Minus" /> &nbsp;&nbsp;&nbsp;
+      
+    </form>
+<h2>@ViewBag.SumResult</h2> 
+
+<input type="text" id="i1" >
+<input type="text" id="i2">
+
+<input type="text" id="result">
+<input type="button" value="Add"  onclick="addNet()" >
+
+
+<script type="text/javascript">
+function addNet(){
+    var num1 =  document.getElementById('i1').value;
+    var num2 =  document.getElementById('i2').value;
+    
+
+    var sum = parseInt(num1) + parseInt(num2);
+    document.getElementById('result').value = sum;
+    console.log(sum);
+}
+
+
+
+</script>

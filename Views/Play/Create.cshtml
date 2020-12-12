@@ -1,0 +1,211 @@
+@model MvcPlay.Models.Play
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Play test </h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+ <div class="form-group row">
+                
+                <label asp-for="Title" class=" col-sm-2 col-form-label"></label>
+                 <div class="col-sm-4"> 
+                <input asp-for="Title" class="form-control" />
+                </div>
+                <span asp-validation-for="Title" class="text-danger"></span>
+
+                
+                <label asp-for="ReleaseDate" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-4"> 
+
+                <input asp-for="ReleaseDate" class="form-control" />
+                </div>
+                <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+            
+
+
+ </div>
+     
+        
+
+        <div class="input-group">
+  <div class="form-control">
+    <span class="input-group-text" id="">Item </span>
+  </div>
+<div class="form-control">
+    <span class="input-group-text" id="">Unit</span>
+  </div>
+  <div class="form-control">
+    <span class="input-group-text" id="">Price</span>
+  </div>
+  <div class="form-control">
+    <span class="input-group-text" id="">Qty</span>
+  </div>
+  <div class="form-control">
+    <span class="input-group-text" id="">Total </span>
+  </div>
+  <div class="form-control">
+    <span class="input-group-text" id="">Discount </span>
+  </div>
+  <div class="form-control">
+    <span class="input-group-text" id="">Net  </span>
+  </div>
+
+
+</div>
+
+<br>
+<div class="input-group">
+
+    <select id="input" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+    <select id="input2" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+</div>
+
+
+<div class="input-group">
+
+  <select id="input" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+    <select id="input2" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+</div>
+
+<div class="input-group">
+
+  <select id="input" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+    <select id="input2" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+</div>
+
+<div class="input-group">
+  
+  <select id="input" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+    <select id="input2" class="form-control">
+        <option selected>Choose...</option>
+        <option>..1.</option>
+        <option>..2.</option>
+        <option>..3.</option>
+        <option>..5.</option>
+    </select>
+
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+  <input type="text" class="form-control">
+</div>
+
+
+
+
+ 
+
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>..1.</option>
+                    <option>..2.</option>
+                    <option>..3.</option>
+                    <option>..5.</option>
+                </select>
+            </div>
+
+
+        
+
+            <div class="form-group">
+                <label asp-for="Genre" class="control-label"></label>
+                <input asp-for="Genre" class="form-control" />
+                <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
